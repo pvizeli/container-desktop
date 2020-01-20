@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-numpy \
         tigervnc-standalone-server \
         ca-certificates \
+        procps \
     && rm -rf /var/lib/apt/lists/* \
     && git clone --depth 1 -b v${NOVNC_VERSION} https://github.com/novnc/noVNC \
     && git clone --depth 1 -b v${WEBSOCKIFY_VERSION} https://github.com/novnc/websockify noVNC/utils/websockify \
